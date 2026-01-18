@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{34A3E7E1-F47D-467D-BBEF-455F2A8319B6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>
+    </RootNamespace>
+    <AssemblyName>Framework</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Framework.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Framework.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>Framework.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>Framework.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>
+    </NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\DomainException.vb" />
+    <Compile Include="除外\Audit\AuditActionType.vb" />
+    <Compile Include="除外\Audit\AuditDetail.vb" />
+    <Compile Include="除外\Audit\AuditDiff.vb" />
+    <Compile Include="除外\Audit\AuditRecord.vb" />
+    <Compile Include="除外\Audit\AuditRepository.vb" />
+    <Compile Include="除外\Audit\AuditService.vb" />
+    <Compile Include="除外\Caching\CachedExecutor.vb" />
+    <Compile Include="除外\Caching\CacheItem.vb" />
+    <Compile Include="除外\Caching\CacheManager.vb" />
+    <Compile Include="除外\Caching\CachePolicy.vb" />
+    <Compile Include="除外\Caching\CacheStore.vb" />
+    <Compile Include="Core\Configuration\ConfigurationProvider.vb" />
+    <Compile Include="Core\ErrorHandling\ErrorHandler.vb" />
+    <Compile Include="Core\Logging\AppLogger.vb" />
+    <Compile Include="Core\SafeGet.vb" />
+    <Compile Include="Core\StringUtil.vb" />
+    <Compile Include="Data\AuditHelper.vb" />
+    <Compile Include="Data\IAuditable.vb" />
+    <Compile Include="Data\Mapper\DataReaderMapperBase.vb" />
+    <Compile Include="Data\Mapper\DataRowMapperBase.vb" />
+    <Compile Include="Data\Mapper\IDataReaderMapper.vb" />
+    <Compile Include="Data\Mapper\IDataRowMapper.vb" />
+    <Compile Include="Data\QueryBuilder\QueryBuilder.vb" />
+    <Compile Include="Data\RepositoryBase\RepositoryBase.vb" />
+    <Compile Include="Data\SqlExecutor\SqlExecutor.vb" />
+    <Compile Include="Data\TableDefinitions\TableDefinitionBase.vb" />
+    <Compile Include="Domain\DomainServiceBase.vb" />
+    <Compile Include="除外\ErrorRecovery\RetryContext.vb" />
+    <Compile Include="除外\ErrorRecovery\RetryExecutor.vb" />
+    <Compile Include="除外\ErrorRecovery\RetryPolicy.vb" />
+    <Compile Include="除外\ErrorRecovery\RetryResult.vb" />
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IO\Csv\CsvImporterBase\CsvImporterBase.vb" />
+    <Compile Include="IO\Csv\CsvResult.vb" />
+    <Compile Include="IO\Csv\CsvValidationError.vb" />
+    <Compile Include="IO\Csv\ICsvStrategy.vb" />
+    <Compile Include="IO\Csv\SafeGetCsv.vb" />
+    <Compile Include="IO\Export\CsvExporter.vb" />
+    <Compile Include="IO\Export\ExcelExporter.vb" />
+    <Compile Include="IO\Export\ExportColumn.vb" />
+    <Compile Include="IO\Export\ExportDefinition.vb" />
+    <Compile Include="IO\Export\ExporterBase.vb" />
+    <Compile Include="IO\Export\ExportService.vb" />
+    <Compile Include="IO\FileHelper.vb" />
+    <Compile Include="除外\Monitoring\FileHealthCheck.vb" />
+    <Compile Include="除外\Monitoring\HealthCheckManager.vb" />
+    <Compile Include="除外\Monitoring\HealthCheckResult.vb" />
+    <Compile Include="除外\Monitoring\IHealthCheck.vb" />
+    <Compile Include="除外\Monitoring\JobMonitor.vb" />
+    <Compile Include="除外\Monitoring\JobStatus.vb" />
+    <Compile Include="除外\Monitoring\MonitoringService.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="除外\Plugin\IPlugin.vb" />
+    <Compile Include="除外\Plugin\PluginContext.vb" />
+    <Compile Include="除外\Plugin\PluginInfoAttribute.vb" />
+    <Compile Include="除外\Plugin\PluginManager.vb" />
+    <Compile Include="除外\Report\CsvReportExporter.vb" />
+    <Compile Include="除外\Report\ExcelReportExporter.vb" />
+    <Compile Include="除外\Report\PdfReportExporter.vb" />
+    <Compile Include="除外\Report\PrintReportExporter.vb" />
+    <Compile Include="除外\Report\ReportColumn.vb" />
+    <Compile Include="除外\Report\ReportDefinition.vb" />
+    <Compile Include="除外\Report\ReportExporterBase.vb" />
+    <Compile Include="除外\Report\ReportService.vb" />
+    <Compile Include="除外\Report\ReportTemplate.vb" />
+    <Compile Include="除外\RuleEngine\AmountRule.vb" />
+    <Compile Include="除外\RuleEngine\BlackListRule.vb" />
+    <Compile Include="除外\RuleEngine\HighAmountRule.vb" />
+    <Compile Include="除外\RuleEngine\IRule.vb" />
+    <Compile Include="除外\RuleEngine\RuleBase.vb" />
+    <Compile Include="除外\RuleEngine\RuleContext.vb" />
+    <Compile Include="除外\RuleEngine\RuleDefinition.vb" />
+    <Compile Include="除外\RuleEngine\RuleEngine.vb" />
+    <Compile Include="除外\RuleEngine\RuleRegistry.vb" />
+    <Compile Include="除外\RuleEngine\RuleResult.vb" />
+    <Compile Include="除外\RuleEngine\RuleSet.vb" />
+    <Compile Include="除外\RuleEngine\StockRule.vb" />
+    <Compile Include="除外\Scheduler\IScheduledJob.vb" />
+    <Compile Include="除外\Scheduler\ScheduledJobBase.vb" />
+    <Compile Include="除外\Scheduler\Scheduler.vb" />
+    <Compile Include="除外\Scheduler\SchedulerManager.vb" />
+    <Compile Include="除外\Search\ConditionOperator.vb" />
+    <Compile Include="除外\Search\SearchCondition.vb" />
+    <Compile Include="除外\Search\SearchCriteriaBase.vb" />
+    <Compile Include="除外\Search\SearchCriteriaBuilder.vb" />
+    <Compile Include="除外\Search\SearchExtensions.vb" />
+    <Compile Include="除外\Search\UserSearchCriteria.vb" />
+    <Compile Include="除外\Security\AuthenticationService.vb" />
+    <Compile Include="除外\Security\AuthorizationService.vb" />
+    <Compile Include="除外\Security\IAuthenticationProvider.vb" />
+    <Compile Include="除外\Security\PasswordHasher.vb" />
+    <Compile Include="除外\Security\Permission.vb" />
+    <Compile Include="除外\Security\Role.vb" />
+    <Compile Include="除外\Security\SecurityContext.vb" />
+    <Compile Include="除外\Security\UserIdentity.vb" />
+    <Compile Include="除外\StateMachine\IState.vb" />
+    <Compile Include="除外\StateMachine\StateAction.vb" />
+    <Compile Include="除外\StateMachine\StateDefinition.vb" />
+    <Compile Include="除外\StateMachine\StateMachine.vb" />
+    <Compile Include="除外\StateMachine\StateMachineRegistry.vb" />
+    <Compile Include="除外\StateMachine\StateTransition.vb" />
+    <Compile Include="UI\EventWrapper\EventWrapper.vb" />
+    <Compile Include="UI\FormBase\FormBase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormNavigator.vb" />
+    <Compile Include="UI\MessageProvider.vb" />
+    <Compile Include="UI\NotificationService.vb" />
+    <Compile Include="UI\Theme\Theme.vb" />
+    <Compile Include="UI\Theme\ThemeColorPalette.vb" />
+    <Compile Include="UI\Theme\ThemeFontPalette.vb" />
+    <Compile Include="UI\Theme\ThemeManager.vb" />
+    <Compile Include="Validation\IValidator.vb" />
+    <Compile Include="Validation\RuleBuilder.vb" />
+    <Compile Include="Validation\ValidationException.vb" />
+    <Compile Include="Validation\ValidationResult.vb" />
+    <Compile Include="Validation\ValidatorBase.vb" />
+    <Compile Include="Validation\DateRangeRule.vb" />
+    <Compile Include="Validation\IValidationRule.vb" />
+    <Compile Include="Validation\RangeRule.vb" />
+    <Compile Include="Validation\RegexRule.vb" />
+    <Compile Include="Validation\RequiredRule.vb" />
+    <Compile Include="Validation\ValidationRuleBase.vb" />
+    <Compile Include="Validation\ValidationSeverity.vb" />
+    <Compile Include="Validation\Validator.vb" />
+    <Compile Include="除外\Workflow\IWorkflowStep.vb" />
+    <Compile Include="除外\Workflow\NotifyUserSavedStep.vb" />
+    <Compile Include="除外\Workflow\SaveUserStep.vb" />
+    <Compile Include="除外\Workflow\WorkflowDefinition.vb" />
+    <Compile Include="除外\Workflow\WorkflowRegistry.vb" />
+    <Compile Include="除外\Workflow\WorkflowRunner.vb" />
+    <Compile Include="除外\Workflow\WorkflowStepContext.vb" />
+    <Compile Include="除外\Workflow\WorkflowStepResult.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\Extensions\" />
+    <Folder Include="Core\Helpers\" />
+    <Folder Include="Core\Validation\" />
+    <Folder Include="Data\SafeGet\" />
+    <Folder Include="Domain\Entities\" />
+    <Folder Include="Domain\Services\" />
+    <Folder Include="Infrastructure\Helpers\" />
+    <Folder Include="IO\Csv\Strategies\" />
+    <Folder Include="IO\Csv\Validators\" />
+    <Folder Include="UI\Validation\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
