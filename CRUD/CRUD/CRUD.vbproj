@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F623CC0E-36A8-4F25-8947-0635B6697227}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>My.MyApplication</StartupObject>
+    <RootNamespace>
+    </RootNamespace>
+    <AssemblyName>CRUD</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CRUD.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CRUD.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="01_Framework\Base\Csv\CsvImportRequest.vb" />
+    <Compile Include="01_Framework\Base\Exceptions\BusinessException.vb" />
+    <Compile Include="01_Framework\Base\Exceptions\SystemException.vb" />
+    <Compile Include="01_Framework\Base\Exceptions\TechnicalException.vb" />
+    <Compile Include="01_Framework\Base\Exceptions\ValidationException.vb" />
+    <Compile Include="01_Framework\Base\Form\FormBase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01_Framework\Base\Form\MdiChildBase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01_Framework\Base\Form\MdiParentBase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01_Framework\Base\Interface\ICsvFile.vb" />
+    <Compile Include="01_Framework\Base\Interface\ICsvReader.vb" />
+    <Compile Include="01_Framework\Base\Interface\IValidator.vb" />
+    <Compile Include="01_Framework\Base\Repository\BaseRepository.vb" />
+    <Compile Include="01_Framework\Base\Repository\ColumnNameAttribute.vb" />
+    <Compile Include="01_Framework\Base\Repository\ConnectionFactory.vb" />
+    <Compile Include="01_Framework\Base\Repository\IRepository.vb" />
+    <Compile Include="01_Framework\Base\Repository\Mapper.vb" />
+    <Compile Include="01_Framework\Base\Repository\UnitOfWork.vb" />
+    <Compile Include="01_Framework\Base\Validator\IValidator.vb" />
+    <Compile Include="01_Framework\Utility\DpiUtil.vb" />
+    <Compile Include="01_Framework\Utility\MappingUtil.vb" />
+    <Compile Include="01_Framework\Utility\MDIUtil.vb" />
+    <Compile Include="02_AppCommon\Repository\TransactionDataCsvImport.vb" />
+    <Compile Include="02_AppCommon\UI\Control\ImportControl.Designer.vb">
+      <DependentUpon>ImportControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="02_AppCommon\UI\Control\ImportControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="01_Framework\Base\Csv\CsvImportResult.vb" />
+    <Compile Include="01_Framework\Base\Repository\IImportRepository.vb" />
+    <Compile Include="03_Application\Csv\02_ViewService\Dto\MasterEditModel.vb" />
+    <Compile Include="03_Application\Csv\02_ViewService\MasterEditViewController.vb" />
+    <Compile Include="03_Application\Csv\03_Service\MasterEditServce.vb" />
+    <Compile Include="03_Application\Csv\04_Domain\Entity\MasterEditEntity.vb" />
+    <Compile Include="03_Application\Csv\05_Infrastructure\CsvReader\CsvFile.vb" />
+    <Compile Include="03_Application\Csv\05_Infrastructure\Dto\BasicResult.vb" />
+    <Compile Include="03_Application\Csv\02_ViewService\Dto\MasterEditInputDto.vb" />
+    <Compile Include="03_Application\Csv\05_Infrastructure\Repository\MasterEditRepository.vb" />
+    <Compile Include="03_Application\Csv\05_Infrastructure\Validator\MasterEditValidator.vb" />
+    <Compile Include="03_Application\Csv\Validator\CsvImportValidator.vb" />
+    <Compile Include="03_Application\Csv\02_ViewService\Dto\XxxCsvImportInputDto.vb" />
+    <Compile Include="03_Application\Csv\03_Service\XxxImportService.vb" />
+    <Compile Include="01_Framework\Base\Service\IImportService.vb" />
+    <Compile Include="03_Application\Csv\05_Infrastructure\Repository\SqlXxxImportRepository.vb" />
+    <Compile Include="03_Application\Csv\02_ViewService\XxxImportViewController.vb" />
+    <Compile Include="03_Application\Csv\01_UI\Forms\Form\FrmCsvImport.Designer.vb">
+      <DependentUpon>FrmCsvImport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="03_Application\Csv\01_UI\Forms\Form\FrmCsvImport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03_Application\Csv\01_UI\Forms\Form\FrmMasterEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03_Application\Csv\01_UI\Forms\Form\FrmMasterEdit.Designer.vb">
+      <DependentUpon>FrmMasterEdit.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03_Application\Csv\04_Domain\Entity\XxxImportEntity.vb" />
+    <Compile Include="01_Framework\Base\Exceptions\AppException.vb" />
+    <Compile Include="01_Framework\Base\Logging\Logger.vb" />
+    <Compile Include="01_Framework\Base\Csv\CsvImportTemplate.vb" />
+    <Compile Include="01_Framework\Utility\CsvReader.vb" />
+    <Compile Include="03_Application\Csv\05_Infrastructure\Mapper\XxxImportMapper.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="01_Framework\Base\Repository\QueryBuilder.vb" />
+    <Compile Include="01_Framework\Base\Template\Repository\SafeGet.vb" />
+    <Compile Include="01_Framework\Base\Template\Repository\SqlExecutor.vb" />
+    <Compile Include="01_Framework\Base\Template\Repository\TableDefinition.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="02_AppCommon\UI\Control\ImportControl.resx">
+      <DependentUpon>ImportControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03_Application\Csv\01_UI\Forms\Form\FrmCsvImport.resx">
+      <DependentUpon>FrmCsvImport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03_Application\Csv\01_UI\Forms\Form\FrmMasterEdit.resx">
+      <DependentUpon>FrmMasterEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="01_Framework\Base\Template\ApplicationService\" />
+    <Folder Include="01_Framework\Base\Template\Presentation\" />
+    <Folder Include="02_AppCommon\Dto\" />
+    <Folder Include="02_AppCommon\Result\" />
+    <Folder Include="02_AppCommon\Service\" />
+    <Folder Include="02_AppCommon\Validation\" />
+    <Folder Include="03_Application\Application\" />
+    <Folder Include="03_Application\Csv\01_UI\Style\" />
+    <Folder Include="03_Application\Csv\04_Domain\DomainService\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
