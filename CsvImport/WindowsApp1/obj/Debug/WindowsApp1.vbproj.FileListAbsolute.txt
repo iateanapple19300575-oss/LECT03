@@ -1,0 +1,11 @@
+C:\開発３\Lesson02\CsvImport\WindowsApp1\bin\Debug\WindowsApp1.exe
+C:\開発３\Lesson02\CsvImport\WindowsApp1\bin\Debug\WindowsApp1.pdb
+C:\開発３\Lesson02\CsvImport\WindowsApp1\bin\Debug\WindowsApp1.xml
+C:\開発３\Lesson02\CsvImport\WindowsApp1\obj\Debug\WindowsApp1.vbproj.AssemblyReference.cache
+C:\開発３\Lesson02\CsvImport\WindowsApp1\obj\Debug\WindowsApp1.Form1.resources
+C:\開発３\Lesson02\CsvImport\WindowsApp1\obj\Debug\WindowsApp1.Resources.resources
+C:\開発３\Lesson02\CsvImport\WindowsApp1\obj\Debug\WindowsApp1.vbproj.GenerateResource.cache
+C:\開発３\Lesson02\CsvImport\WindowsApp1\obj\Debug\WindowsApp1.vbproj.CoreCompileInputs.cache
+C:\開発３\Lesson02\CsvImport\WindowsApp1\obj\Debug\WindowsApp1.exe
+C:\開発３\Lesson02\CsvImport\WindowsApp1\obj\Debug\WindowsApp1.xml
+C:\開発３\Lesson02\CsvImport\WindowsApp1\obj\Debug\WindowsApp1.pdb
